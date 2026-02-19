@@ -8,8 +8,8 @@ db = SQLAlchemy()
 def create_app():
     app = Flask(__name__)
 
-    app.config['SECRET_KEY'] = 'secret-key-goes-here'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:440412Bb.@localhost:5432/FitLife'
+    app.config['SECRET_KEY'] = 'TEXT'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'TEXT'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     db.init_app(app) 
@@ -75,7 +75,7 @@ def create_app():
             temel_su_ihtiyaci -= 0.25
 
         
-        aciklama = f"📊 Vücut Kitle İndeksiniz: {vki:.1f}, kilo durumunuz: {kilo_durumu}. "
+        aciklama = f" Vücut Kitle İndeksiniz: {vki:.1f}, kilo durumunuz: {kilo_durumu}. "
 
     
         if su < temel_su_ihtiyaci:
